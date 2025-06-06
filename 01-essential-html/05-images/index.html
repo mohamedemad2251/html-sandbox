@@ -6,8 +6,19 @@
     <title>HTML & CSS Sandbox</title>
   </head>
   <body>
-    <h2>Image With a Relative Path</h2>
-
+    <h2>Image With a Relative Path (+ Width & Height Attributes)</h2>
+    <img src="images/landscape.jpg" alt="A Landscape Picture" width="300" height="300">
     <h2>Image With an Absolute Path</h2>
+    <img src="https://picsum.photos/300/300" alt="A Random Picture">  
+    <!-- This link has an API that gets a random photo, it's not the default way but I'm showcasing an absolute path -->
+    <h2>Figure & Figure Captions</h2>
+    <!-- We start with a figure root element, add the img element then figcaption for caption -->
+    <figure>  
+      <img src="images/landscape.jpg" alt="A Beautiful Landscape" height="300" width="300" title="Landscape">
+      <figcaption>Figure 1 - A Landscape</figcaption>
+    </figure>
+
+    <!-- Note: title attribute is used for when you hover over an image, you'll see text. Try it. -->
+
   </body>
 </html>
