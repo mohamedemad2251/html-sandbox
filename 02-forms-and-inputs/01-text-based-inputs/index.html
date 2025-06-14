@@ -7,5 +7,41 @@
   </head>
   <body>
     <h1>HTML & CSS Sandbox - Text Inputs</h1>
+    <!-- A form tag is for showing the input fields you can type into, it doesn't do anything on the
+     server side. But it's how the form is structured & displayed using HTML & CSS -->
+    <!-- Have a form tag to enclose anything that is form related. Action represents the server-side
+     action that occurs when you submit this form (to process the data) -->
+    <!-- Now this is very important: methods can be POST & GET (HTTP protocol). POST is for sending
+      data from the client to server and GET is from server to client -->
+    <!-- HTTP is a hypertext protocol to send/recieve HTML (not sure if it's that only).
+       You can have POST, GET, DELETE, etc. (you can search up the resst) -->
+    <!-- <form action="#" method="POST"> -->
+    <form method="POST">
+      <!-- A label tag is to have the label represented in your browser, without it, only the textbox
+       shows -->
+      <div>
+        <!-- The "for" attribute is to connect a label to the id of an input (remember, the ID) -->
+        <label for="name">Name</label>
+        <!-- Input tag is the actual textbox you can type into, it's how you send the data -->
+        <input type="text" name="name" id="name" />
+      </div>
+
+      <br />
+      <!-- Line break element, but not the best way to do this, use CSS instead (we're making it easy
+       here) -->
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+      </div>
+      <br />
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
   </body>
 </html>
