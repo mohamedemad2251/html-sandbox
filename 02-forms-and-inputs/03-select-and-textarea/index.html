@@ -7,5 +7,43 @@
   </head>
   <body>
     <h1>HTML & CSS Sandbox - Select & Textarea</h1>
+    <h2>Tech Support</h2>
+
+    <!-- For select, start a <form>, then <select>, 
+    then <option> (option is inside select, select is inside form) -->
+    <!-- select -> Multiple: make it a multiple select, size: number of selections shown at once
+    selected: which selection is selected by default-->
+    <form>
+      <label for="single-product">Product</label>
+      <select name="single-product" id="single-product">
+        <option value="iphone">iPhone</option>
+        <option value="imac">iMac</option>
+        <option selected value="samsung">Samsung</option>
+      </select>
+      <br />
+      <br />
+      <label for="multi-product">Multiple Products</label>
+      <select name="multi-product" id="multi-product" multiple size="2">
+        <option value="iphone">iPhone</option>
+        <option selected value="imac">iMac</option>
+        <option selected value="samsung">Samsung</option>
+      </select>
+      <br />
+      <br />
+      <label for="description">Description</label>
+      <!-- Text areas is for multi-lined text -->
+      <!-- rows: Any number -->
+      <!-- cols: Any multiples of 10, so 10,20,30,40.... -->
+      <textarea
+        name="description"
+        id="description"
+        placeholder="Enter your description here"
+        rows="4"
+        cols="40"
+      ></textarea>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
   </body>
 </html>

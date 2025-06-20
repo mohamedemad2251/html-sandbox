@@ -7,5 +7,36 @@
   </head>
   <body>
     <h1>HTML & CSS Sandbox - Checkboxes & Radio</h1>
+    <h2>Select Your Favorite Programming Language</h2>
+    <form>
+      <!-- Checkboxes and Radio are tricky: You put the label first. Then inside, you write the <input> tag -->
+      <label for="HTML">
+        <input type="checkbox" name="languages" id="HTML" />
+        HTML
+      </label>
+      <label for="css">
+        <input type="checkbox" name="languages" id="css" checked />
+        CSS
+      </label>
+      <label for="javascript">
+        <input type="checkbox" name="languages" id="javascript" checked />
+        JavaScript
+      </label>
+      <br />
+      <br />
+      <h2>Select A Size</h2>
+      <label for="small">
+        <input type="radio" name="small" id="small" />
+        Small
+      </label>
+      <label for="medium">
+        <input type="radio" name="medium" id="medium" checked />
+        Medium
+      </label>
+      <label for="large">
+        <input type="radio" name="large" id="large" />
+        Large
+      </label>
+    </form>
   </body>
 </html>
