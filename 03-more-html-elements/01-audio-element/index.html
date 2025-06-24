@@ -7,5 +7,37 @@
   </head>
   <body>
     <h1>HTML & CSS Sandbox - Audio</h1>
+
+    <!-- We use the audio element with attribute "src" to play an audio. 
+     "controls" is to show the player & let the user control it -->
+    <!-- Type: Audio/mp3 -->
+    <h2>Audio With Controls</h2>
+    <audio src="song1.mp3" controls type="audio/mp3"></audio>
+
+    <!-- Putting the audio in <audio> and parenting <source> -->
+    <h2>Audio With Controls (From Audio > Source Tags)</h2>
+    <audio controls>
+      <source src="song1.mp3" />
+      <!-- Void tag/element  -->
+      <!-- We can have fallback text here if the audio element is not supported -->
+      <p>
+        Audio element is not supported (if you don't see an audio, this is shown
+        instead)
+      </p>
+    </audio>
+
+    <!-- Just add the loop attribute in the audio element -->
+    <h2>Audio - Looped</h2>
+    <audio src="song1.mp3" controls loop></audio>
+
+    <!-- Just add the autoplay attribute in the audio element -->
+    <h2>Audio - Autoplay</h2>
+    <audio src="song1.mp3" controls autoplay></audio>
+
+    <h2>Audio In A Figure</h2>
+    <figure>
+      <figcaption>Listen to this song:</figcaption>
+      <audio src="song1.mp3" controls></audio>
+    </figure>
   </body>
 </html>
