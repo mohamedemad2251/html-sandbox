@@ -7,5 +7,29 @@
   </head>
   <body>
     <h1>HTML & CSS Sandbox - Tables</h1>
+    <table>
+      <!-- Table element that wraps around everything -->
+      <colgroup>
+        <!-- chooses a column group -->
+        <col style="background-color: aqua" />
+        <!-- Makes the first column's background aqua -->
+        <!-- Next is a second -->
+      </colgroup>
+      <thead>
+        <!-- Semantic Element (Just to make the structure clear, this is the table's head) -->
+        <th>Name</th>
+        <!-- th is the table head -->
+        <th>Age</th>
+        <th colspan="2">Number</th>
+        <!-- colspan: how many columns this column head holds-->
+      </thead>
+      <tbody>
+        <td>John</td>
+        <!-- Actual cell value -->
+        <td>25</td>
+        <td>07775000</td>
+        <td>01122557</td>
+      </tbody>
+    </table>
   </body>
 </html>
