@@ -1,0 +1,64 @@
+/* Type Selector (like body, p, h2, etc. Basically elements */
+body{
+    background: aliceblue;   
+    font-family: Arial, Helvetica, sans-serif;  /* Applies to everything inside body */
+}
+
+/* Class Selector */
+.card{
+    background-color:darkgray;
+    border-radius: 5px;
+    /* margin: auto; */
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+/* Type within class (use ">") for child elements */
+.card>h2{
+    margin-top: 2%;
+    padding-top: 1%;
+    margin-left: 1%;
+}
+
+.card>p{
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 1%;
+
+}
+
+.card>a{
+    margin-bottom: 1%;
+    margin-left: 1%;
+    color:white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Multiple Selectors (use ",") */
+.card>h2,.card>a{
+    font-size: 20px;
+}
+
+/* ID Selector (then child), use "#" */
+#card-sporty>h2{
+    color:red;
+}
+#card-casual>h2{
+    color:blue;
+}
+#card-formal>h2{
+    color:brown;
+}
+
+#card-sporty>a{
+    background-color: red;
+}
+
+#card-casual>a{
+    background-color: blue;
+}
+
+#card-formal>a{
+    background-color: brown;
+}

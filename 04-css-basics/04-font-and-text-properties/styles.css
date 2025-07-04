@@ -1,0 +1,6 @@
+body{
+    /* What this means: grab the font family "Poppins". If not, fallback to one of the sans-serif fonts */
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* You can check serif vs sans-serif on google (visualize it) */
