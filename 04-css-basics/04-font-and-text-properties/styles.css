@@ -1,6 +1,51 @@
-body{
-    /* What this means: grab the font family "Poppins". If not, fallback to one of the sans-serif fonts */
-    font-family: 'Poppins', sans-serif; 
+html{
+    font-size: 18px;
 }
 
+body{
+    /* What this means: grab the font family "Poppins". If not, fallback to one of the sans-serif fonts */
+    /* This is also called a font-stack. It looks for Poppins, if not found, then sans-serif. If not found, ..., etc. */
+    font-family: 'Poppins', sans-serif; 
+
+    /* line-height is usually put in the body (one of the bigger containers/parent elements) */
+    /* line-height: changes the gap between lines (vertically). Usually used with em/rem units */
+    /* rem: relative em, size multiplier relative to the html element's font-size  */
+    /* For example: html element default font-size = 16px. A 2rem means 32px. We can change html font-size */
+    line-height: 2rem;
+}
+
+a{
+    /* This will remove the underlining for anchor elements (links) */
+    text-decoration: none;  
+}
+
+h2{
+    font-size: 30px;
+    /* You can inspect the element. Go to styles > Computed, you'll find the number in pixels (if something is computed like rem, x-large */
+    font-weight: 300; /*Light*/
+    /*font-weight: 400;*/ /*Normal*/
+    /* font-weight: 600;*/ /*Semi-Bold*/
+    /* You can use the keywords like "semi-bold" & "bold" but again, those are computed */
+    font-style: italic;
+    font-variant: normal;
+
+    /* You can also do this in one line */
+    font: normal 700 26px Arial;
+
+    /* This transforms the text without the need to change the markup itself (can be capitalized, uppercase or lowercase */
+    text-transform: uppercase;      
+
+    /* Text indenting pushes the text away a bit */
+    text-indent: 20px;
+
+    /* Letter spacing is, well, the spaces around letters (horizontally) */
+    letter-spacing: 2px;
+
+    /* Word spacing is the same but for words */
+    word-spacing: 5px;
+
+    /* The most important one: text-align. This is how you align the text horizontally inside the text's
+    container */
+    text-align: center;
+}
 /* You can check serif vs sans-serif on google (visualize it) */
