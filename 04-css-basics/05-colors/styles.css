@@ -1,3 +1,36 @@
 body {
   font-family: Arial, sans-serif;
+  /* background-color is the as using background */
+  /* HEXADECIMAL COLORS */
+  background-color: #f0f8ff;
+
+  background-color: #fff; /* For a pair of 6 identical numbers, you can shorten it to 3 (shorthand) */
+}
+
+.sporty{
+  /* Color names, you can search "HTML color names" to find all colors */
+  color: red;
+}
+
+.casual{
+  /* RGB Colors (Red),(Green),(Blue) */
+  /* color: rgb(0, 0, 255); */
+  /* RGBA Colors (Red),(Green),(Blue),(Alpha/Transparency) */
+  color: rgba(0, 0, 255, 0.6)
+}
+
+.formal{
+  /* HSL Colors (Hue, a circle from 0 to 360 for colors), (Saturation), (Lightness) */
+  color: hsl(0, 1%, 20%);
+  /* HSL Colors (Hue, a circle from 0 to 360 for colors), (Saturation), (Lightness), (Alpha/Transparency) */
+  color: hsla(0, 1%, 20%,0.5);
+
+}
+
+.card-2{
+  background-color: #000;
+  color: #fff;
+  /* Opacity: How NOT transparent something is. 1 = Opaque (Not transparent) */
+  /* Opacity vs Transparency: Opacity controls child elements too while transparency does not */
+  opacity: 0.5;   
 }

@@ -10,6 +10,23 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+
+  /* Background Color */
+  /* background-color: coral; */
+
+  /* Background Image */
+  /* background-image: url('./hero.jpg');
+  background-repeat: no-repeat;   Background images repeat by default.
+  background-size: cover;     Can be px too, or %, whatever you want as a unit.
+  background-position: center; */ /*Can be px too*/
+  /* background: url('./hero.jpg') no-repeat center/cover; /* You can just use "backround" and specify */
+  /* it in the same order as shown above: URL -> background-repeat -> size -> position*/ /**/
+
+  /* background-attachment: fixed;   fixed or scroll */
+
+  /* Linear Gradient */
+  background:linear-gradient(to bottom,darkblue,lightgreen);
+  /* Can be to top, bottom, left, right bottomleft bottomright, etc. First color is "from", second is "to" */
 }
 
 .hero h1 {

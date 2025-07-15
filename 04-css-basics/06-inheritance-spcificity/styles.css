@@ -1,3 +1,5 @@
+/* !important > inline css (style="") > ID (#) > Class (.) > Element */
+/* Try these out above, I won't write a thing. Just note that !important literally overrides everything else */
 body {
   font-family: Arial, sans-serif;
 }
