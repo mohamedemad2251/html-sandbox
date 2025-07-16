@@ -1,3 +1,29 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+/* Regular Link */
+a{
+  text-decoration: none;
+}
+
+/* When hovering with mouse (no clicking) */
+a:hover{
+  color: green;
+}
+
+/* When active (the instance of it getting clicked, it's a short window) */
+a:active{
+  background-color: orange;
+}
+
+/* When focused (clicked or pressed Tab till I reach it) */
+a:focus{
+  color: red;
+  
+}
+
+/* When visited (when linked to a link/section and it got visited, at least once, it stays like that permanently) */
+a:visited{
+  background-color: blue;
+}

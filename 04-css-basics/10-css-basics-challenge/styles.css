@@ -1,0 +1,49 @@
+html{
+    font-family: 'Lato';
+}
+body{
+    line-height: 1.6;
+    font-size: 18px;
+}
+.header{
+    background-color: #5e175b;
+    color: #fff;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    text-indent: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover{
+    color: rebeccapurple;
+}
+
+a:active{
+    color: red;
+}
+
+.lead{
+    color: rebeccapurple;
+    font-weight: bold;
+    font-size: 20;
+}
+.main-menu{
+    background-color: #f4f4f4;
+    text-indent: 10px;
+}
+
+ul{
+    padding: 0;     /* It worked here, but not in nav or li, I don't know why.*/
+}
+
+li{
+    text-transform: uppercase;
+    list-style: none;
+}
