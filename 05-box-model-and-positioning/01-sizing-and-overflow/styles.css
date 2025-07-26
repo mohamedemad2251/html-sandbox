@@ -1,3 +1,48 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.box{
+  background-color: darkslateblue;    /* Set the background color to work with the box model */
+  color: white;
+  /* Open devtools then select an element (one of the boxes) and check "Computed" to visualize*/
+
+  padding:20px;   /*Padding is the space AROUND the element itself (inside of a border)*/
+  border: 5px solid green; /*Border is a line (no matter how thick defined around an element/container */
+  /* Look at how there's a space between the text and the border, that's the padding's doing */
+  margin: 20px;   /* Margin is the spacing outside of the border & container */
+  /* Notice how the boxes weren't separated until you've applied a margin */
+}
+
+/* Now we'll play around width,height,max-width,max-height,etc. */
+.box-1{
+  /* An element is by default responsive (scales with the screen, getting a bigger screen, etc.) */
+  /* It usually doesn't work the way you want it, so it's important to learn how every property works */
+  width: 500px;   /*Width puts a strict width to something. No matter how big/small your screen is or
+  how zoomed in/out you are. A width is a width. So here, the width is STRICTLY 500px no matter what*/
+  height: 75px;  /* Same goes for height (strict) */
+  /* Notice how because we have a paragraph bigger than the height, it overflowed. We can control that */
+  overflow: hidden;   /*You can hide extra content that doesn't fit into your container*/
+  /* overflow: scroll;   you can make it scrollable */
+  overflow-y: scroll;  /* Making it scrollable in y-direction only (vertically) */
+
+}
+
+.box-2{
+  width: 50%;   /* Here, the width will be 50% of the PARENT container (in this case, it's the body element) */
+  /* Try zooming in and out and see how the container adapts to it, it's responsive */
+
+}
+
+.box-2 p{
+  width: 50%;  /* Now, the width of the paragraph becomes 50% of its PARENT container (here, that's
+  the box-2 div element. So you can tell how relativity works here. */
+}
+
+.box-3{
+  max-width: 60%;
+  /* You set the max-width so that it can go smaller, but not bigger than a value. */
+  /* This helps build responsiveness for the mobile, etc. */
+
+  /* min-width is the opposite. */
+}

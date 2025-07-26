@@ -32,7 +32,7 @@ a:active{
 .lead{
     color: rebeccapurple;
     font-weight: bold;
-    font-size: 20;
+    font-size: 20px;
 }
 .main-menu{
     background-color: #f4f4f4;

@@ -1,3 +1,21 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.box{
+  width: 50%;
+  background-color: rebeccapurple;
+  color: #fff;
+
+  /* All-sides padding */
+  /* padding: 20px; */
+
+  /* Single-line padding (T-R-B-L) */
+  /* padding: 20px 10px 10px 5px; */
+
+  /* 2-parameters padding (TB-LR) */
+  /* padding: 20px 10px; */
+
+  /* 3-parameters padding (T-LR-B) */
+  padding: 10px 5px 20px;
+}
