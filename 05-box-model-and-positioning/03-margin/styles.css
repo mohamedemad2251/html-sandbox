@@ -1,3 +1,25 @@
+/* NOTE: Padding takes care of the inner space inside the border of the element.
+    Margin takes care of the outer space outside the border of the element. */
+
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+h3,p{
+  margin: 0;    /*Resets margin for h3 and p. This is important because the div has no margin, but the 
+  h3 and p do*/
+}
+
+.box{
+  background-color: rebeccapurple;
+  color:#fff;
+  margin-top: 20px;
+  width: 50%;
+}
+
+.box.box-1{
+  margin: auto; /*Centers it horizontally*/
+  /* margin-top: -40px;  You can set a negative margin value but that isn't the best practice. */
+}
+
+/* Stuff like T-R-B-L, TB-LR & the other ones work here like padding does. */

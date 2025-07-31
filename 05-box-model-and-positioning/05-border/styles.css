@@ -9,8 +9,42 @@ body {
 }
 
 .box {
-  background: coral;
+  /* background: coral; */
   max-width: 400px;
   margin: 20px;
   padding: 20px;
+
+  /* Shorthand (Shorthand means all in one line)*/
+  /* It goes: width style color (I just realized it can go in any order which is GREAT) */
+  /* NOTE: you cannot specify 1 or 2 parameters. You have to give a color, style and width */
+  border: black 2px solid;
+
+  /* Multiple properties/lines (This is the same as the one above, uncomment it and test)*/
+  /* border-width: 2px;
+  border-style: solid;
+  border-color: black; */
+}
+
+.box-1{
+  border-top: 3px dashed blue;  /*You can choose a side specific and do a shorthand*/
+  /* Keep in mind that box & box-1 are equal to each other as classes (check HTML structure) */
+  /* However, box-1 comes AFTER box, so it overrides it (here, we just override the top border) */
+
+  /* Multiple properties/lines but side-specific (uncomment to test) */
+  /* border-top-color: green;
+  border-top-style: dashed;
+  border-top-width: 3px; */
+
+  border-bottom: red dashed;  /* Here, it was fine to exclude the width. Why? It got inherited 
+  since a box-1 is a box as well and box already has 3 parameters defined */
+  /* So, color: got replaced by red. style: got replaced by dashed (the same). width: inherited */
+}
+
+.box-2{
+  border-radius: 10px;    /* For rounded edges */
+}
+
+.box-3{
+  border-top-left-radius: 10px; /* Edge-specific border radius */
+  border-bottom-right-radius: 10px;
 }

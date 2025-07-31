@@ -1,3 +1,74 @@
 body {
   font-family: Arial, sans-serif;
+  border: 3px dashed red;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+/* Static is the default behavior of position for elements */
+/* Static: Element is positioned using the natural order of the HTML file/content */
+.static {
+  position: static;
+}
+
+/* Relative: The box's position is calculated according to the normal flow (static-like behavior)
+(this is called the position in normal flow). Then the box is offset relative to its normal position. */
+/* We can use here top, right, left, bottom */
+/* The box is RELATIVE TO ITSELF */
+.relative {
+  position: relative;
+  left: 20px; /* A 20px left-spacing (so it's pushed to the right a bit) has been applied */
+  /* NOTE: The spacing is more than 20px because margin is taken into consideration */
+}
+
+/* Fixed: an element is fixed inside a container and doesn't move out of place no matter what */
+/* NOTE: the interpreter works now as if the element DOES NOT EXIST (so sticky took its place) */
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* Now, the element is on the top-right. (Since top-spacing or how far it is from top is 0 and same
+  happens for right. */
+  /* (I've added a border to show you that it's positioned RELATIVE to the parent container (so, the 
+  <body> element) */
+}
+
+/* Sticky: an element sticks to the top of the viewpoint TILL THE END OF THE PARENTAL CONTAINER (important) */
+/* Sticky was made that way to avoid unexpected behavior.  */
+.sticky {
+  position: sticky;
+  top: 5px;
+  z-index: 1; /* All elements (I think) have a z-index of 0 by default (it can go negative) */
+  /* Z-index indicates which layer/element appears first/on-top if some elements are overlapping. */
+  /* Z-index works on relative,fixed,sticky and absolute (literally everything but static) */
+}
+
+/* Notice how "Fixed" keeps on going regardless of the container */
+
+/* This is tricky AND important. You have to make the parent of absolute elements "relative" because
+then, you make the elements absolute but CONFINED TO THAT CONTAINER. If you don't, it CONFINES WITH
+THE BODY/HTML ELEMENT */
+.relative-absolute {
+  position: relative;
+  width: 50%;
+  height: 400px;
+}
+
+/* Absolute: an element is FIXED in an absolute path/dimensions relative to a relative element OR body/HTML */
+/* Now, the .absolute box is positioned absolutely relative to .relative-absolute box */
+/* Note, the space you're seeing is due to the margin of all boxes, keep that in mind */
+.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: orangered;
 }

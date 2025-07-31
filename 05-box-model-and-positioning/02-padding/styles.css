@@ -10,7 +10,7 @@ body {
   /* All-sides padding */
   /* padding: 20px; */
 
-  /* Single-line padding (T-R-B-L) */
+  /* Single-line padding (T-R-B-L) (This is called a "shorthand") */
   /* padding: 20px 10px 10px 5px; */
 
   /* 2-parameters padding (TB-LR) */

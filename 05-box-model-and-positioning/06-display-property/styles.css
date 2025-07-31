@@ -1,3 +1,45 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+/* Notice how when you do display:none; the ENTIRE element is gone INCLUDING the spacing */
+.none{
+  display: none;
+}
+
+/* While in visibility: hidden; the element is not seen but the spacing IS STILL THERE */
+/* This is the main difference when asked: display none vs hidden visibility  */
+.hidden{
+  visibility: hidden;
+}
+
+/* You can force an element to be a specific layout: none, inline, block, flex, grid, table, inherit, etc. */
+p{
+  display: inline;
+}
+
+/*This will be overwritten for testing */
+a{
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  margin: 20px 20px;    /* Here, we applied a vertical and horizontal margin. But notice that
+  ONLY the HORIZONTAL margin got applied. Why? Because this is an inline element. Moroever, you 
+  cannot use width or height changes*/
+  width: 20px;
+  height: 30px;   /* As you can see, they didn't work. That's because they're inline */
+}
+
+/* SOLUTION: USE INLINE-BLOCK */
+/* Inline-block makes it so that you have inline elements BUT you can style it however you'd like. */
+
+a{
+  display: inline-block;
+  background-color: blue;
+  color: white;
+  padding: 5px 20px;
+  margin: 20px 20px;
+  width: 60px;
+  height: 30px;
+  /* As you can see, now they are applied successfully */
+}

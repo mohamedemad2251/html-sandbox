@@ -1,5 +1,13 @@
-body {
-  font-family: 'Poppins', sans-serif;
+/* Asterisk targets ALL elements for our webpage, targets every single one */
+/* This is important because something like borders are not inherited by the children elements */
+/* Whatever you'd want to happen for literally everything, use "*" (like resetting padding & margining) */
+*{  
+  margin: 0;
+  padding: 0;
+  /* border: red solid 5px;  Try to uncomment this. */
+  box-sizing: border-box;
+  /* This takes care of whether the border is limited by width/height or not.
+  border-box limits, content-box doesn't. */
 }
 
 body {
@@ -8,7 +16,7 @@ body {
 
 .box {
   background: coral;
-  max-width: 400px;
-  margin: 20px;
+  max-width: 200px;
+  margin: 100px;
   padding: 20px;
 }
