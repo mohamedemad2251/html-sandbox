@@ -15,24 +15,28 @@
   <body>
     <main>
       <div class="container">
-        <div class="card">
-          <h1>Need to hire a freelancer?</h1>
-          <p>
-            Sign up, type in what you need and receive free quotes in seconds.
+        <form class="freelancer-form" action="#" method="post">
+          <h3 class="form-heading">Need to hire a freelancer?</h3>
+          <p class="form-paragraph">
+            Sign up, type in what you need and recieve free quotes in seconds.
           </p>
-          <form>
-            <div class="form-group">
-              <input
-                type="text"
-                id="text"
-                placeholder="What do you need done?"
-              />
-            </div>
-            <div class="form-group">
-              <button type="submit">Post a Project</button>
-            </div>
-          </form>
-        </div>
+          <div class="form-text-div">
+            <input
+              class="form-text-input"
+              type="text"
+              placeholder="What do you need done?"
+              name="form-input"
+            />
+          </div>
+
+          <div class="form-button-div">
+            <input
+              class="form-button-input"
+              type="button"
+              value="Post A Project"
+            />
+          </div>
+        </form>
       </div>
     </main>
   </body>

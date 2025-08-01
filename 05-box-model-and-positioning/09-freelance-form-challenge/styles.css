@@ -5,6 +5,65 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+  /* height: 100vh; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* margin: auto 0; */
+  /* width: 50%; */
+  /* height: 50%; */
+}
+
+.freelancer-form {
+  background-color: #373f4d;
+  text-align: center;
+  /* width: 50%; */
+  width: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  height: 300px;
+  box-shadow: 3px 3px 6px rgba(29, 27, 27, 0.4);
+}
+
+.freelancer-form > * {
+  margin-top: 20px;
+}
+
+.form-heading {
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.form-paragraph {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.form-text-input {
+  /* text-align: center; */
+  padding-left: 10px;
+  height: 30px;
+  width: 100%;
+}
+
+.form-button-input {
+  /* display: block; */
+  width: 100%;
+  min-height: 40px;
+  background: linear-gradient(
+    90deg,
+    rgba(242, 132, 62, 1) 21%,
+    rgba(239, 111, 69, 1) 61%
+  );
+  /* Note: you can use a website called gradient css to get this cool color */
+  cursor: pointer; /* so when we hover over it, we get a pointer */
+  color: #fff;
+  border: none;
 }

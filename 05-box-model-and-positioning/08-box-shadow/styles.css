@@ -17,3 +17,12 @@ body {
   border: 1px solid #ccc;
   border-radius: 10px;
 }
+
+.box-1 {
+  /* box-shadow requires 3 MANDATORY parameters: horizontal offset, vertical and color */
+  /* you can add blur radius as a 4th and spread radius as a 5th */
+  /* you can apply negative pixels/size to go left and bottom */
+  /* It's smart to blur the box-shadow either using the blur radius OR using rgba (preferably rgba) */
+  /* you can have multiple box-shadow instances using "," (comma) and adding another one. */
+  box-shadow: 10px 10px #000;
+}
