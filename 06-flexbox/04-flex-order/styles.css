@@ -12,3 +12,30 @@ body {
   padding: 30px;
   flex: 1;
 }
+
+/* In the HTML structure, our items are ordered 1 to 6. However, we can change that using "order" */
+/* Now, we don't need to change the HTML order or structure, just the order of the flex items. */
+
+.item-1 {
+  order: 4;
+}
+
+.item-2 {
+  order: 3;
+}
+
+.item-3 {
+  order: 2;
+}
+
+.item-4 {
+  order: 5;
+}
+
+.item-5 {
+  order: 6;
+}
+
+.item-6 {
+  order: 1;
+}

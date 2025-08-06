@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(0, 25, 187, 0.7);
+}
+
+.container {
+  /* height: 100vh; */
+  height: 1000px;
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing {
+  background-color: rgb(240, 242, 248);
+  /* width: 75%; */
+  /* height: 70%; */
+
+  padding: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* padding: 20px; */
+  gap: 10px;
+}
+
+.card {
+  flex: 1;
+  background-color: #fff;
+  text-align: center;
+  flex-basis: 30%;
+  /* width: 30%; */
+  max-height: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* .card  */
+.card h2 {
+  margin: 30px 20px;
+  padding: 15px 0px;
+  text-transform: uppercase;
+  font-size: medium;
+}
+
+.card.card-free h2 {
+  background-color: rgb(174, 181, 220, 0.2);
+}
+
+.card.card-pro h2 {
+  background: #a7d5eb;
+  background: linear-gradient(
+    90deg,
+    rgba(167, 213, 235, 1) 21%,
+    rgba(178, 173, 237, 1) 41%,
+    rgba(122, 104, 237, 1) 100%
+  );
+  color: #fff;
+}
+
+.card.card-enterprise h2 {
+  background: #ebaff0;
+  background: linear-gradient(
+    90deg,
+    rgba(235, 175, 240, 1) 11%,
+    rgba(224, 175, 126, 1) 50%,
+    rgba(227, 136, 0, 1) 100%
+  );
+  color: #fff;
+}
+
+.card .price {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 20px 0px;
+  color: rgb(40, 44, 76);
+}
+
+.card .price span,
+.card .price sup {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  padding: 5px;
+}
+
+.card .price-info {
+  text-transform: uppercase;
+  margin: 20px 0px;
+}
+
+.card .main-text {
+  font-weight: 500;
+  font-size: small;
+}
+
+.card .btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  margin: 80px 20px 10px;
+  padding: 20px 0;
+  width: 90%;
+
+  color: rgb(40, 44, 76);
+  border: 1px solid rgb(40, 44, 76, 0.5);
+  border-radius: 5px;
+}
+
+.card .btn:hover {
+  background-color: rgb(40, 44, 76);
+  color: #fff;
+}
+
+.card ul {
+  text-align: start;
+  margin: 40px;
+  list-style: none;
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.card ul li i {
+  margin-right: 5px;
+}

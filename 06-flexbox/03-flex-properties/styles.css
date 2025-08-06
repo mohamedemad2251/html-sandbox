@@ -1,3 +1,49 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+.flex-container {
+  background-color: lightblue;
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+}
+
+.flex-item {
+  background-color: bisque;
+  border: 1px solid black;
+
+  /* Flexbox allows dynamic sizing. Meaning, you can change the window/browser's size and the elements
+  would become responsive (change as well, dynamically) */
+  /* flex-shrink: the rate of shrinking of the child/class */
+  flex-shrink: 1;
+  /* flex-grow: the rate of growing of the child/class */
+  flex-grow: 0;
+  /* flex-basis: the start size of the child/class */
+  flex-basis: 200px;
+}
+
+/* We can make it so that a specific item grows or shrinks at a faster/slower rate than the others. */
+/* Take a look at this example below: */
+.item-1 {
+  flex-grow: 1;
+  /* Here, with flex-grow being 0 for all flex-items (look at the class selector above), only item 1
+  grows in size. So it occupies whatever space it can find in the container */
+}
+
+.item-2 {
+  flex-grow: 2;
+  /* Here, item 2 now grows at double the rate of item 1, so it occupies more space */
+}
+
+.flex-item {
+  /* The shorthand for flex-grow, flex-shrink and flex-basis is called "flex" */
+  /* Order: flex-grow | flex-shrink | flex-basis */
+  flex: 1 0 300px;
+  /* Now, all the flex items grow in size, don't shrink and the basis is 300px (it can shrink till 300) */
+
+  /* Another shorthand (uses only flex-grow, and flex-shrink and flex-basis are 0*/
+  flex: 1;
+  /* This is equivalent to flex: 1 0 0; */
+}

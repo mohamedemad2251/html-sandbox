@@ -1,3 +1,37 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+.flex-container {
+  /* Transform the container from block to a flex container/box */
+  /* Note: container is a flex in the ROW direction by default (left to right) */
+  /* The direct children of this container are flex items (nested items are not part of the flex layout) */
+  /* Using the flex layout, some properties are now enabled to be used, like direction, gaps, wrap, etc. */
+  display: flex;
+  /* Change the direction of the flex layout to column (up to down) */
+  /* flex-direction: column; */
+  background-color: #ccc;
+
+  /* Notice how the width is changed when zooming in/out even though we have defined a fixed width.
+  This can be fixed by changing the wrap option. */
+  /* This means that flex items should stick to their widths. If they don't fit, wrap to the next row/line */
+  flex-wrap: wrap;
+
+  /* We used to make spacing with margin. But that can be achieved with "gap" if the layout is flex. */
+  /* This adds a gap in both directions: the row and the column. */
+  /* gap: 10px; */
+
+  /* We can add a gap specifically for rows (under each row), we use row-gap */
+  /* row-gap: 10px; */
+
+  /* Same for the columns specifically */
+  column-gap: 10px;
+}
+
+.flex-item {
+  background-color: blueviolet;
+  width: 200px;
+  height: 200px;
+  color: white;
+  border: 1px solid white;
+}

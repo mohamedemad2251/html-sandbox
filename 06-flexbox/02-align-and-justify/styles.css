@@ -1,3 +1,50 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+.flex-container {
+  background-color: lightblue;
+  height: 600px;
+  /* Now, we make the container a flexbox (remember, it's row by default. So items are put in a row-direction) */
+  display: flex;
+
+  /* We can now use the flex properties for alignment and justification */
+  /* Notice the following points:
+  1- justify-content: aligns/justifies the items *depending on* the MAIN AXIS 
+  Meaning: if the flexbox is a row, the main axis is horizontal. So then justify-content controls the horizontal direction.
+  2- align-items: aligns/justifies the items *depending on* the CROSS AXIS
+  Meaning: if the flexbox is a row, the cross axis is vertical. So then align-items controls the vertical direction.
+  */
+  justify-content: space-between;
+  /* Justify content options:
+  1- flex-start: At the start of the main-axis (so to the left for a row flexbox and top for a column flexbox)
+  2- flex-end: At the end of the main-axis (so to the right for a row flexbox and bottom for a column flexbox)
+  3- center: To the center of the main-axis
+  4- space-between: gaps around items in the main-axis direction (but no gaps at the edges)
+  5- space-around: gaps around items in the main-axis direction + spaces at the edge (not equal to the gap between the items)
+  6- space-evenly: gaps around items in the main-axis direction + spaces at the edge (equal to the gap between the items)
+  */
+
+  align-items: center;
+  /* NOTE: for stretch option, the height/width shouldn't be strict. */
+
+  /* You can change the layout of the flexbox using flex-direction */
+  /* flex-direction: column; */
+}
+
+.flex-item {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
+}
+
+/* You can justify/align specific items in the flexbox. To do that, use align-self for that child. */
+.item-2 {
+  /* Now, item 2 will be specifically at the end */
+  align-self: flex-end;
+}
+
+.item-3 {
+  align-self: start;
+}
