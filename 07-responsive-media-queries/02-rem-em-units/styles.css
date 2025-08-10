@@ -5,5 +5,40 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  /* rem: Relative unit that references the root element <html>'s font-size and scales up to it. */
+  /* Root element's font-size (default) = 16px */
+  font-size: 2rem;
+
+  /* em: Relative unit that references the parent element. If parent element doesn't specify a size,
+  it inherits from the parent of that parent, and it keeps going until reaching a size OR reaching
+  the root <html> element. */
+  font-size: 1em;
+  /* In this case, container div doesn't have a font-size, so it inherits from <html> (body doesn't have it
+  too) */
+
+  /* rem and em are responsive because in the settings of the browser (a part of user accessibility), 
+  you can specify a font size for text (large, small, medium, etc.). That makes your page scalable.
+  However, any fixed unit (e.g. px) won't change no matter what the setting in the browser is on.
+  Because px are just px. But rem and em are relative. */
+}
+
+/* em isn't recommended (at least for Brad), because it's always relative to the container, right?
+Take for example the ul and li we've added in the HTML, we have 2 nested lists inside a list. */
+
+/* Notice what will happen when you apply a font-size for <ul> */
+ul {
+  /* Here, the size keeps increasing. Why? Because the first ul has 1.2em and the reference is 
+  <html> so 1.2 * 16 = 19.2px */
+  /* Then, the second one is 1.2 * parent element (19.2) = 23.04px */
+  /* The last one is 1.2 * parent element (23.04) = 27.648px */
+  font-size: 1.2em;
+
+  /* This is more stable because it always refers to the root element <html> */
+  /* So, 1.2 * 16 = 19.2px */
+  /* (You can comment the line below to check how em reacts) */
+  font-size: 1.2rem;
 }

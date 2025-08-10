@@ -5,5 +5,25 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  /* Notice how the container here takes the size of the content only */
+  background-color: coral;
+  /* height: 100% */
+  /* You'd think that height 100% will solve it but even the body is the size of the content. So,
+  100% of the parent (body) is the same (i.e. nothing changed). */
+
+  /* Now, let's try viewports. Viewports are the size of the screen no matter what, from start to end */
+  /* 100vh is 100 viewport height and 100vw is the width. */
+
+  height: 50vh;
+}
+
+/* You can use this relative unit with text (namely headings) but the sizing when zooming in/out will be
+significant.*/
+
+h1 {
+  font-size: 7vw;
 }

@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: 1.6;
   background-color: #27264b;
@@ -27,7 +27,7 @@ li {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 95%;
   background: #f8fafe;
   border-radius: 10px;
   margin: 0 auto;
@@ -50,6 +50,8 @@ li {
   text-align: center;
   margin-bottom: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 27%;
+  /* max-width: 28%; */
 }
 
 .card h2 {
@@ -101,12 +103,14 @@ li {
 
 .card .price-info {
   margin-bottom: 20px;
+  min-height: 50px;
   text-transform: uppercase;
 }
 
 .card .main-text {
   font-size: 14px;
   margin-bottom: 50px;
+  min-height: 70px;
 }
 
 /* Buttons */
@@ -148,4 +152,55 @@ li {
 .card ul i {
   color: #98ca9e;
   margin-right: 10px;
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+  .container {
+    padding: 5% 5%;
+    margin: 7%;
+  }
+
+  .pricing {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    padding: 5%;
+    min-height: 90vh;
+  }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 992px) {
+  .container {
+    padding: 5% 5%;
+    margin: 4%;
+  }
+
+  .card {
+    /* width: 90%; */
+    min-width: 45%;
+    padding: 5%;
+    min-height: 90vh;
+
+    max-width: 50%;
+  }
+
+  .card .price-info {
+    min-height: 60px;
+  }
+
+  .card .main-text {
+    min-height: 70px;
+  }
+}
+
+@media (min-width: 993px) {
+  .card {
+    max-width: 28%;
+  }
 }

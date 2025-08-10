@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 ul {
@@ -65,4 +65,66 @@ h2 {
   padding: 10px;
   background: #f4f4f4;
   border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 992px) {
+  /* It turns out that the overflow problem was due to the main-menu being a row and going beyond the 
+  width of the screen. */
+
+  .header {
+    text-align: center;
+    font-size: 0.6rem;
+    padding: 20px;
+  }
+
+  .main-menu {
+    flex-direction: column;
+    padding: 3%;
+    text-align: center;
+  }
+
+  .main-menu li a {
+    font-size: 0.8rem;
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 4%;
+    /* width: 10px; */
+    margin-top: 2vh;
+    gap: 5vh;
+  }
+
+  .main section h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .main section p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .main aside {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    /* border: 1px solid rgba(0, 0, 0, 1); */
+    border-radius: 20px;
+  }
+
+  .main aside h3 {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    padding: 10px;
+    background: coral;
+    color: #fff;
+  }
+
+  .main aside li {
+    padding: 10px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+  }
 }

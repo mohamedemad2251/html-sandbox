@@ -7,3 +7,51 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+/* Media Queries */
+/* Syntax: @media *target* and (*condition 1*) and (*condition 2*): (IF APPLICABLE) */
+
+/* Can be used to target specific screens, heights/widths, viewports, orientation, etc. */
+
+/* VERY IMPORTANT: Pixel values you'll need later:
+  1- 576 px: Smartphones
+  2- 768 px: Tablets
+  3- 992 px: Desktops
+  4- 1024 px: Landscape
+  5- 1200 px: Desktop/Widescreen
+*/
+
+/* NOTE: There is a concept called: desktop-first. And another called: mobile-first
+
+  desktop-first means: you can design the layout for the desktop first. Then design the mobile after by 
+  using media queries for mobile/tablet screens.
+
+  mobile-first means: you can design the layout for the mobile first. Then design the desktop after by 
+  using media queries for desktop screens.
+
+*/
+
+/* Here, I'll use desktop-first, but I'll showcase different conditions as well. */
+
+/* This will apply ONLY for smartphones (since the max-width was used) */
+@media screen and (max-width: 576px) {
+  .smartphone {
+    background-color: coral;
+  }
+}
+
+/* Notice how we can omit the *target* */
+/* This will apply for everything EXCEPT smartphones (since min-width was used) */
+@media (min-width: 768px) {
+  .tablet {
+    background-color: lightblue;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .normal {
+    background-color: lightcoral;
+  }
+}
+
+/* Play around with the conditions. You can also use max/min-height and orientation: landscape/portrait */
