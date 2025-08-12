@@ -6,7 +6,7 @@
 
 html,
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -38,6 +38,23 @@ img {
   color: #fff;
   padding: 10px 0;
   margin-bottom: 80px;
+
+  /* The element to stick is the header menu, so targetting the class .header, we make it sticky. */
+
+  /* Now, we want to also make the header sticky when not on top, this requires javascript. Because
+we'll be adding a class called 'transparent' as well to the .header class. That'd differentiate when
+it's transparent and when it's not. Javascript will make it conditional so that it's toggled. */
+  position: sticky;
+  top: 0;
+}
+
+/* This clsas will be toggled (added and removed using javascript) */
+.header.transparent {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.8),
+    rgba(0, 0, 255, 0.8)
+  );
 }
 
 .header .menu ul {

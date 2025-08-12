@@ -4,8 +4,32 @@
   box-sizing: border-box;
 }
 
+/* syntax: scope {
+
+  --variable-name: value;   (NOTE: -- is a must before the variable, any spaces are replaced with a hyphen '-')
+}
+  
+  NOTE: You are limited to the scope you define when using variables, therefore, it's best to define 
+  these variables after a reset and before the code.
+
+  To include the variables as global variables, use :root
+*/
+
+:root {
+  --primary-color: #6f5ab6;
+  --secondary-color: #c5803f;
+  --tertiary-color: #4a975b;
+}
+
+.box-normal {
+  --box-width: 400px;
+}
+.box-large {
+  --box-width: 600px;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -15,7 +39,7 @@ header {
 }
 
 .container {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 30px auto;
   display: flex;
   gap: 20px;
@@ -26,4 +50,18 @@ header {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  width: var(--box-width);
+}
+
+/* To use the variables, use var() then inside, use --variable-name. Simple. */
+/* NOTE: You can make a variable out of any value and repeat using it. */
+.box-1 {
+  background-color: var(--primary-color);
+}
+.box-2 {
+  background-color: var(--secondary-color);
+}
+.box-3 {
+  background-color: var(--tertiary-color);
 }

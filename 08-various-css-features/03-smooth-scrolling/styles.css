@@ -4,6 +4,64 @@
   box-sizing: border-box;
 }
 
+/* Target the outer element for the smooth scrolling to work */
+/* NOTE: It won't work with <body> only. Why? Because the scroll-behavior property works by 
+  telling the browser to specify the behavior of scrolling IN A SPECIFIC ELEMENT as scroll.
+  So, in Chrome (for example), the main scrolling happens on the <html> root element level. So <body>
+  changes nothing, since the main scroll isn't in that element. It's in <html>, target that.
+  */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.main-menu {
+  background: linear-gradient(to right, #ff0000, #002cf0);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 40px auto;
+  max-width: 60%;
+}
+
+section h3 {
+  background: linear-gradient(to right, #ff0000, #002cf0);
+  padding: 10px;
+  color: white;
+
+  margin-bottom: 20px;
+}
+
+section p {
+  padding: 10px;
+  margin-bottom: 20px;
 }
