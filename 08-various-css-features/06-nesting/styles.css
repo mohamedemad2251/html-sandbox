@@ -5,6 +5,68 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
+}
+
+/* Nesting: using a selector INSIDE another selector (multiple nesting is allowed) */
+.header {
+  background-color: lightcoral;
+  color: black;
+  padding: 30px 30px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Here we're targetting the h1 selector that's only inside .header elements */
+  h1 {
+    font-size: 4rem;
+  }
+
+  /* Here we're targetting the p selector that's only inside .header elements */
+  p {
+    font-size: 2rem;
+  }
+}
+
+.container {
+  height: 100vh;
+
+  .card {
+    margin: 70px 20px;
+    padding: 20px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 15px;
+    height: 40vh;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .container {
+    height: 50vh;
+
+    .card {
+      margin: 30px 20px;
+      padding: 20px 20px;
+    }
+  }
 }

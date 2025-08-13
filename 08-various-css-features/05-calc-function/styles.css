@@ -5,5 +5,15 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
+
+/* calc() syntax:
+  
+  calc(operand-1 operator operand-2)
+
+  Example: calc(200px - 100px)    Result: 100px
+  Example: calc(50% - 100px)    Result: 50% of the container in px - 100px
+  Example: calc(2rem - 5px)    Result: (16 x 2)-> 32 - 5 = 17px
+
+*/
