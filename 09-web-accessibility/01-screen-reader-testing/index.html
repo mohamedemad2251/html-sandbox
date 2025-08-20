@@ -13,7 +13,78 @@
     <link rel="stylesheet" href="./style.css" />
     <title>HTML & CSS Sandbox</title>
   </head>
+
+  <!-- Adding Semantic Elements improves SEO for searching and accessibility for those with disabilities
+   Some people are blind, color blind, have physical disabilities (can't move their hands for example)
+   These people deserve to be able to navigate the web just like everyone else. 
+   Are you blind? The screen reader will help you listen
+   Are you deaf? Audio is going to show as text
+   Color blind? No worries, the website looks good in greyscale
+   Physical disability? Focus changing to links/paragraphs/sections/headers will help you.
+   THIS is accessibility. -->
+
+  <!-- NON-Accessible Website (You can remove this commented HTML to try it out, make sure to comment Accessible Website HTML though) -->
+  <!-- <body>
+    <div class="header">
+      <a href="./" class="logo">My Website</a>
+      <div class="nav">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./about">About</a></li>
+          <li><a href="./contact">Contact</a></li>
+          <li>
+            <a href="/"><i class="fab fa-facebook"></i></a>
+          </li>
+        </ul>
+        <div class="search">
+          <input type="text" id="search" />
+          <button>Search</button>
+        </div>
+      </div>
+    </div>
+  </body> -->
+
+  <!-- Accessible Website (You can remove this commented HTML to try it out, make sure to comment Non-Accessible Website HTML though) -->
+
   <body>
-    <h1>HTML & CSS Sandbox - Screen Reader Testing</h1>
+    <!-- Use the semantic element: header -->
+    <header class="header">
+      <!-- Use aria-label (which reads out loud what an element does or what it is) -->
+      <a
+        href="./"
+        class="logo"
+        aria-label="Logo & Link to homepage - My Website"
+        >My Website</a
+      >
+      <!-- Add the semantic element: nav, this will make them know they're at navigation -->
+      <nav class="nav">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./about">About</a></li>
+          <li><a href="./contact">Contact</a></li>
+          <li>
+            <!-- Add aria label for the facebook icon (it's added in the hyperlink) -->
+            <a href="/" aria-label="Follow Us On Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="search">
+          <!-- Here, we didn't specify a label, we should. But what if we don't want to display it? -->
+          <!-- This is where class="visually-hidden" comes in (you can search for the styling snippet) -->
+          <!-- It makes the text invisible for people who can see, but the screen reader doesn't ignore it -->
+          <label class="visually-hidden" for="search">Search</label>
+          <input type="text" id="search" />
+          <button>Search</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Again, make it semantic and add a <main>  -->
+    <main>
+      <!-- We should add an H1 to make it clear what the page is about. Check "accessibility checker" 
+      for mistakes -->
+      <h1>Hello, welcome to my website!</h1>
+    </main>
   </body>
 </html>

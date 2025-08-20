@@ -7,6 +7,50 @@
     <title>HTML & CSS Sandbox</title>
   </head>
   <body>
-    <h1>HTML & CSS Sandbox - Role Attribute</h1>
+    <!-- <h1>HTML & CSS Sandbox - Role Attribute</h1> -->
+
+    <!-- Role Attributes: It allows screen readers to announce to the user what this section/part is -->
+    <!-- Semantic Element: header, doesn't show the "banner" on the screen reader -->
+    <!-- <header>
+      <h1>My Website</h1>
+    </header> -->
+
+    <!-- Now, it says "Entered Banner - ..." -->
+    <header role="banner">
+      <h1>My Website</h1>
+    </header>
+
+    <!-- Some semantic elements don't need a role declared. For example: main -->
+    <!-- Instead of: -->
+    <!-- <div role="main"> -->
+    <!-- Use: -->
+    <main>
+      <!-- So, always use a semantic element rather than a role -->
+
+      <!-- You can declare anything as a role you want, like you can declare an img as a button -->
+      <!-- NOTE: declaring doesn't mean it's a button, it simply means you want the screen reader to say button -->
+      <img
+        role="button"
+        src="https://picsum.photos/200/300"
+        aria-label="A random image"
+      />
+
+      <!-- If you want a button or something to be focused/tabbed-into, we can use tabindex attribute -->
+
+      <!-- Let's try to do the role declaration for a listbox that has list options -->
+      <ul role="listbox" aria-label="Fruits">
+        <li role="option">Apple</li>
+        <li role="option">Orange</li>
+        <li role="option">Grapes</li>
+        <li role="option">Pineapple</li>
+      </ul>
+
+      <!-- Region role specifies regions in the document, a header is a banner, a main is the main and you
+       can specify whatever region you want using role="region" -->
+      <div class="faq" role="region">
+        <h2>FAQ</h2>
+        <p>Recently asked questions</p>
+      </div>
+    </main>
   </body>
 </html>

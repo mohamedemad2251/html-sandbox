@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.6;
 }
 
@@ -60,7 +60,7 @@ body {
   align-items: center;
 }
 
-.search input[type='text'] {
+.search input[type="text"] {
   padding: 8px;
   border: none;
   border-radius: 5px 0 0 5px;
@@ -68,9 +68,11 @@ body {
   outline: none;
 }
 
+/* Accessibility checker said there's a problem with this contract for color blind people, we'll fix it now */
 .search button {
   padding: 8px 15px;
-  background-color: #4caf50;
+  /* background-color: #4caf50; */
+  background-color: #316f33;
   color: #fff;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -80,5 +82,19 @@ body {
 }
 
 .search button:hover {
-  background-color: #45a049;
+  background-color: #1d401e;
+}
+
+.visually-hidden {
+  /* Clip the element into a rectangle with no sides (zero) */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  /* Make it as small as possible, but not 0, because some screen readers optimize and ignore elements
+  with no size */
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  /* Make it absolute, so it's outside of the HTML's normal structure/flow */
+  position: absolute;
+  white-space: nowrap;
 }
