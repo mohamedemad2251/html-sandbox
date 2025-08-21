@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 nav {
@@ -72,20 +72,45 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* Attribute Selectors */
+/* selector[attribute targeted 1][attribute targeted 2 (this is like AND-condition)] */
+
 /* Select by type attribute */
-
+input[type="text"] {
+  border-color: orange;
+}
 /* Select by name attribute */
-
-/* Select text type and id of name */
-
+input[name="name"] {
+  background-color: gray;
+}
+/* Select email type AND id of email  */
+input[type="email"][id="email"] {
+  border-color: green;
+}
 /* Select required inputs */
-
+input[required] {
+  border-color: red;
+  /* NOTE: I think because the type=email and id=email is more specified than just "required",
+  the green border color had higher *specificity* than the red border */
+}
 /* Select password with a maxlength of 8 */
-
+input[type="password"][maxlength="8"] {
+  border-color: blue;
+}
 /* Select button with type of submit */
-
+button[type="submit"] {
+  background-color: lightcoral;
+}
 /* Select only links that have a href attribute starting with # */
-
+/* (I think this is regex) */
+a[href^="#"] {
+  color: lightgreen;
+}
 /* Select only links that have a href attribute ending with .com */
-
+a[href$=".com"] {
+  color: purple;
+}
 /* Select only links that have a href attribute containing traversy */
+a[href*="traversy"] {
+  text-decoration: underline;
+}
