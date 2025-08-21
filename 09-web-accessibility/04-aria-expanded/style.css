@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .accordion {
@@ -23,6 +23,7 @@ body {
   display: none; /* Hide content by default */
 }
 
-.accordion-content[aria-hidden='false'] {
+/* A selector, when accordion-content has an attribute aria-hidden="false" */
+.accordion-content[aria-hidden="false"] {
   display: block; /* Show content when aria-hidden is false */
 }
