@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 2;
 }
 
@@ -17,17 +17,32 @@ body {
 
 /* 
 > Child Combinator
-+ General Sibling Combinator
-~ Adjacent Sibling Combinator
++ General Sibling Combinator (the first sibling to that element)
+~ Adjacent Sibling Combinator (any sibling to that element)
 */
 
 /* Get only paragraphs that are direct children of container */
-
+.container > p {
+  /* Notice how only the first paragraph and not the last one changed. */
+  font-weight: bold;
+}
 /* Get only unordered lists that are direct children of container */
-
+.container > ul {
+  /* This will remove the bullet points from the first ul, not the one nested. (Because it's not a direct child) */
+  list-style: none;
+}
 /* Get only links that are direct children of container */
-
-/* Get the immidiate sibling link after h1 */
-
+.container > a {
+  /* link 2 is inside a div inside .container so it doesn't work */
+  color: red;
+}
+/* Get the immediate sibling link after h1 */
+.container h1 + a {
+  /* link 1 only in this case */
+  color: purple;
+}
 /* Get all links that are siblings that come after h1 */
-
+.container h1 ~ a {
+  /* Affects link 1 and 3 because they're both siblings to an h1 inside a container */
+  text-decoration: none;
+}
