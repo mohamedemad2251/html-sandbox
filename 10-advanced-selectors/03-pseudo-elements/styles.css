@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.6;
 }
 
@@ -22,4 +22,54 @@ p {
 input {
   width: 100%;
   padding: 5px;
+}
+
+/* Pseudo elements are elements targetted with "::" to add an extra layer to a selector */
+
+/* First Letter */
+p::first-letter {
+  color: rebeccapurple;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-right: 2px;
+}
+
+/* First Line */
+p::first-line {
+  color: red;
+}
+
+/* Required (This can also be done using input[required] attribute selector)*/
+input:required {
+  border: 1px solid red;
+}
+
+/* Placeholder (inside an input) */
+input::placeholder {
+  color: purple;
+  font-weight: bold;
+}
+
+/* File Selector Button (when type of input is 'file') */
+input::file-selector-button {
+  color: rebeccapurple;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid rebeccapurple;
+  cursor: pointer;
+}
+input::file-selector-button:hover {
+  color: white;
+  background-color: rebeccapurple;
+}
+
+/* Selection, when you drag and highlight a part of text/paragraph */
+p::selection {
+  background-color: yellow;
+}
+
+/* Marker (the bullet points of a list) */
+li::marker {
+  /* Content is a property that lets you change in the HTML inside the CSS. We're replacing the bullet points */
+  content: "- ";
 }

@@ -7,10 +7,41 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .container {
   max-width: 600px;
   margin: 30px auto;
+}
+
+/* is(): new pseudo classes for selecting multiple elements (high specificity)*/
+
+.container :is(h1, h2) {
+  color: red;
+}
+
+/* Is equivalent to this: */
+/* .container h1,
+.container h2 {
+  color: red;
+} */
+
+/* where(): same as is() but lower specificity */
+/* Notice that only paragraphs changed because h1 and h2 got higher specificity styled with is() */
+.container :where(h1, h2, p) {
+  color: blue;
+}
+
+/* has(): targets a parent element (*VERY IMPORTANT*) that has specific children elements */
+/* Here, .container DOES have children where an "a" element is inside a "p" element, so this works */
+.container:has(p a) {
+  background-color: lightcoral;
+}
+
+/* This won't work for two reasons:
+  1- the has() above it is more specific (p a > h2+a)
+  2- Even if it wasn't, there is no "a" that is a direct sibling of "h2", therefore ignored */
+.container:has(h2 + a) {
+  background-color: green;
 }

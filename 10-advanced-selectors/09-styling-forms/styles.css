@@ -7,5 +7,88 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #eee;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 5px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-group {
+  width: 100%;
+  input,
+  textarea {
+    font-family: inherit;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px 5px;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 1px solid rgb(13, 103, 228);
+  }
+
+  /* Invalid Field */
+  input:invalid {
+    outline: 1px solid red;
+  }
+
+  /* Valid Field */
+  input:valid {
+    outline: 1px solid green;
+  }
+
+  input[type="submit"] {
+    width: auto;
+    padding: 0.5rem 1.3rem;
+    background-color: rgb(13, 103, 228);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #fff;
+    color: rgb(13, 103, 228);
+  }
+}
+
+/* Change parent form element when a field is focused inside (within) */
+form:focus-within {
+  padding: 40px;
+}
+
+/* placeholders styling */
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
+
+/* When placeholder is seen (still there, nothing typed yet), this applies) */
+input:placeholder-shown,
+textarea:placeholder-shown {
+  height: 50px;
 }

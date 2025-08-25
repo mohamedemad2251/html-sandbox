@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .container {
@@ -27,4 +27,42 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+}
+
+/* Elements order in page: Element --> ::before --> ::after --> content */
+
+/* ::before and ::after are Pseudo Elements, it's recommended to use "::" (even though ":" works too) */
+
+/* NOTE: you HAVE to add a 'content' property even if you don't use it, populate it at least with '' */
+
+/* Let's insert a "Hello" before the word "World" in h2 */
+.container h2::before {
+  content: "Hello";
+  color: red;
+}
+
+/* Let's insert a "Hi" after the word "World" in h2 */
+.container h2::after {
+  content: "Hi";
+  color: blue;
+}
+
+/* Add the red asterisk after a required field via ::after */
+label.is-required::after {
+  content: "*";
+  margin: 5px;
+  font-size: 1.2rem;
+  color: red;
+  font-weight: bold;
+}
+
+/* Add a red square top right AFTER the container is rendered */
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #ff0000;
 }
