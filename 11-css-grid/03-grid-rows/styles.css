@@ -1,3 +1,30 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+.container {
+  margin: 30px auto;
+  max-width: 1100px;
+}
+
+.item-grid {
+  background-color: #f4f4f4;
+  display: grid;
+
+  /* grid-template-rows (same as columns) */
+  grid-template-rows: 1fr 2fr 3fr;
+
+  /* Notice how the rest of the rows are untouched, we can define a value for any untouched rows */
+  grid-auto-rows: 100px;
+  /* Now, all rows that are not defined in grid-template-rows are equal to 100px */
+
+  /* We can use columns with rows, of course. */
+  grid-template-columns: 1fr 2fr 3fr;
+}
+
+.item {
+  background-color: coral;
+  border: 1px solid #333;
+  text-align: center;
+  padding: 20px;
+}

@@ -16,5 +16,12 @@ body {
 }
 
 .item-grid {
+  display: grid;
+  /* repeat(): repeats a command/value/unit. 1st argument: number of times to be repeated
+  2nd argument: command/value/unit */
+  /* grid-template-columns: repeat(3, 1fr); */
 
+  /* minmax(): defines a minimum value and a maximum value for a property. */
+  /* 1st argument: minimum value, 2nd argument: maximum value. */
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
 }
