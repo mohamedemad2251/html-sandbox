@@ -8,41 +8,73 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* This is an alternative way to layout our grid (other than the template-columns/rows) */
+/* We need to do 2 things:
+
+1- Use grid-template-areas to specify the layout 
+2- Apply grid-area to each layout part. NOTE: whatever name we have in grid-area must match in grid-template-areas
+*/
+
 .container {
   display: grid;
   gap: 1rem;
+
+  grid-template-areas:
+    "header header search"
+    "nav nav nav"
+    "main main aside"
+    "footer footer footer";
 }
 
 header {
   background-color: #333;
   color: #fff;
   padding: 20px;
+  grid-area: header;
 }
 
 nav {
   background-color: #444;
   color: #fff;
   padding: 20px;
+  grid-area: nav;
 }
 
 .search {
   background-color: #666;
   color: #fff;
   padding: 20px;
+  grid-area: search;
 }
 
 main {
   background-color: #f0f0f0;
   padding: 20px;
+  grid-area: main;
 }
 
 aside {
   background-color: #ddd;
   padding: 20px;
+  grid-area: aside;
 }
 
 footer {
   background-color: #666;
   color: #fff;
   padding: 20px;
+  grid-area: footer;
+}
+
+/* Make it responsive, simply change the layout of grid-template-areas (mapping won't change for each item) */
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "search"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  }
 }

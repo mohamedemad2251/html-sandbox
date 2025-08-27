@@ -1,3 +1,31 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+.container {
+  max-width: 650px;
+  margin: 30px auto;
+  background-color: #f4f4f4;
+}
+
+.item-grid {
+  display: grid;
+  /* grid-template-columns: repeat(3, 100px); */
+
+  /* Here, we use auto-fit, which automatically assigns a number of columns to fit into the container
+  (it tries to make it all in one row/line) */
+  grid-template-columns: repeat(auto-fit, 100px);
+
+  /* What if we want it to take up the container's size? We'd use minmax with 100px and 1fr instead
+  for them to grow/shrink */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+  /* If we don't have enough items to fill up the container, a difference between auto-fit and auto-fill
+  is shown. auto-fit re-sizes the inner items to fit the width, while auto-fill does not. */
+}
+
+.item {
+  background-color: coral;
+  border: 1px solid #333;
+  padding: 1rem;
+}

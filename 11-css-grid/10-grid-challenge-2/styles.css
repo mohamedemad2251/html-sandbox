@@ -46,3 +46,64 @@ footer {
   color: #fff;
   padding: 20px;
 }
+
+/* Spanning (My Solution) */
+
+/* .container {
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(12, 1fr);
+} */
+
+/* header {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+nav {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.search {
+  grid-row: span 1;
+}
+
+main {
+  grid-column: span 2;
+  grid-row: span 9;
+}
+
+aside {
+  grid-row: span 9;
+}
+
+footer {
+  grid-column: span 3;
+  grid-row: span 1;
+} */
+
+/* Spanning (Another Solution) (CLEANER) */
+
+.container {
+  grid-template-columns: 2fr 1fr;
+
+  /* Next line isn't right. The reason is that they're getting equal parts, main content and aside 
+  should be the biggest */
+  /* grid-template-rows: repeat(4, minmax(auto-fit, 1fr)); */
+
+  /* This line is correct, the reason is that all sizes are auto except for main content and aside are 1fr */
+  /* IMPORTANT NOTE: fr means “fraction of leftover space.” It expands to fill all remaining space after 
+  the auto rows and gaps are done. */
+  /*  Think of auto rows as “shrink-wrap”: they hug their content.
+      Think of fr rows as “elastic”: they eat up leftover space. */
+  grid-template-rows: auto auto 1fr auto;
+  /* auto takes up the height of the content only (& barely) */
+}
+
+header {
+  grid-column: span 2;
+}
+
+footer {
+  grid-column: span 2;
+}

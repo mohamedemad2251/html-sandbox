@@ -18,6 +18,28 @@ body {
 
 .item-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); */
+
+  /* Shorthand for grid-template columns and rows: grid-template (rows + "/" + columns respectively) */
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+/* Spanning targets specific cells/items */
+/* It's recommended to use F12 (DevTools) to see the grid lines, which we'll use to governate spans */
+.item-1 {
+  /* First way: Start & End */
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  /* Second way: Shorthand Start / End */
+  grid-column: 1/4;
+
+  /* Third way: Start / Span Value */
+  grid-column: 1 / span 2;
+
+  /* Fourth way: Span Value (start is the same so we don't use it) */
+  grid-row: span 2;
+
+  /* NOTE: all these ways apply for columns and rows. */
 }

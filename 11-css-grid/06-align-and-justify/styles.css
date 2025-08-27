@@ -6,6 +6,7 @@ body {
   max-width: 1100px;
   margin: 30px auto;
   background: #f4f4f4;
+  height: 600px;
 }
 
 .item {
@@ -19,4 +20,19 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(3, 100px);
+
+  /* justify-content: aligns the grid itself along the row-axis (x-axis) */
+  justify-content: end;
+
+  /* align-content: aligns the grid itself along the column-axis (y-axis) */
+  align-content: center;
+
+  /* justify-items: align the items along the row-axis (x-axis) (inside their own space in the grid) */
+  justify-items: start;
+
+  /* align-items: align the items along the column-axis (y-axis) (inside their own space in the grid) */
+  align-items: center;
+
+  /* place-content: justify-content + align-content combined */
+  /* place-items: justify-items + align-items combined */
 }

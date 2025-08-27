@@ -16,6 +16,25 @@ body {
   text-align: center;
 }
 
+/* Grid Line Names: They are names that provides descriptive names to lines instead of just numbers. */
+/* To see this, you'd have to go F12 > enable the grid helper > Layout > change "Show line numbers" to 
+"show line names" */
+
 .item-grid {
   display: grid;
+
+  /* Let's not use repeat() to label each and every grid line */
+  /* NOTE: To name, you need to use [], spaces count as a different label for the same grid line */
+  grid-template-columns: [col-1-start] 1fr [col-1-end col-2-start] 1fr [col-2-end col-3-start] 1fr [col-3-end];
+  grid-template-rows: [row-1-start] 1fr [row-1-end row-2-start] 1fr [row-2-end row-3-start] 1fr [row-3-end];
+}
+
+.item-1 {
+  /* We can now span the grid cells using the descriptive name, rather than the numbers. */
+  grid-column-start: col-1-start;
+  grid-column-end: col-2-end;
+}
+
+.item-3 {
+  grid-row: row-2-start / row-3-end;
 }

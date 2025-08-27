@@ -50,3 +50,21 @@ footer {
   padding: 20px;
   grid-column: span 2;
 }
+
+/* Normal media queries, like we used to do. */
+@media (max-width: 768px) {
+  .container {
+    /* We want to stack all the elements, so we override grid-template-columns with only 1 column (1fr) */
+    grid-template-columns: 1fr;
+    /* Notice that now the main content is the 4th item, so now we override rows to make the 4th 1fr */
+    grid-template-rows: auto auto auto 1fr;
+    /* anything that comes after the 4th item (main content), fit the size. */
+    grid-auto-rows: auto;
+  }
+
+  /* All the above will not apply until you remove spans (return them to span 1 as they were by default) */
+  header,
+  footer {
+    grid-column: span 1;
+  }
+}
